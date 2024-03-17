@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mysql_master:
     image: mysql:8.3.0
-    container_name: mysql_master
+    container_name: sharing_lab_01_mysql_master
     environment:
       MYSQL_ROOT_PASSWORD: master_password
       MYSQL_DATABASE: mydatabase
@@ -14,11 +14,11 @@ services:
       - ./config/master:/etc/mysql/conf.d
       - ./init/master:/docker-entrypoint-initdb.d
     networks:
-      - mysql_network
+      - sharing_lab_01
 
   mysql_slave:
     image: mysql:8.3.0
-    container_name: mysql_slave
+    container_name: sharing_lab_01_mysql_slave
     environment:
       MYSQL_ROOT_PASSWORD: slave_password
       MYSQL_DATABASE: mydatabase
@@ -30,7 +30,7 @@ services:
       - ./data/slave:/var/lib/mysql
       - ./config/slave:/etc/mysql/conf.d
     networks:
-      - mysql_network
+      - sharing_lab_01
 
 networks:
-  mysql_network:
+  sharing_lab_01:
