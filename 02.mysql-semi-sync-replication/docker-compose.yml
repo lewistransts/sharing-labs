@@ -29,7 +29,6 @@ services:
     volumes:
       - ./data/slave1:/var/lib/mysql
       - ./config/slave1:/etc/mysql/conf.d
-      - ./init/slave1:/docker-entrypoint-initdb
     networks:
       - mysql_network
 
@@ -46,7 +45,6 @@ services:
     volumes:
       - ./data/slave2:/var/lib/mysql
       - ./config/slave2:/etc/mysql/conf.d
-      - ./init/slave1:/docker-entrypoint-initdb
     networks:
       - mysql_network
 
