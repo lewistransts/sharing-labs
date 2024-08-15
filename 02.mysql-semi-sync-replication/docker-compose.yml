@@ -1,12 +1,10 @@
-version: '3.8'
-
 services:
   mysql_master:
     image: mysql:8.3.0
     container_name: mysql_master
     environment:
-      MYSQL_ROOT_PASSWORD: master_password
-      MYSQL_DATABASE: mydatabase
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: db
     ports:
       - "3306:3306"
     volumes:
@@ -20,8 +18,8 @@ services:
     image: mysql:8.3.0
     container_name: mysql_slave1
     environment:
-      MYSQL_ROOT_PASSWORD: slave_password
-      MYSQL_DATABASE: mydatabase
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: db
     depends_on:
       - mysql_master
     ports:
@@ -29,22 +27,6 @@ services:
     volumes:
       - ./data/slave1:/var/lib/mysql
       - ./config/slave1:/etc/mysql/conf.d
-    networks:
-      - mysql_network
-
-  mysql_slave2:
-    image: mysql:8.3.0
-    container_name: mysql_slave2
-    environment:
-      MYSQL_ROOT_PASSWORD: slave_password
-      MYSQL_DATABASE: mydatabase
-    depends_on:
-      - mysql_master
-    ports:
-      - "3308:3306"
-    volumes:
-      - ./data/slave2:/var/lib/mysql
-      - ./config/slave2:/etc/mysql/conf.d
     networks:
       - mysql_network
 

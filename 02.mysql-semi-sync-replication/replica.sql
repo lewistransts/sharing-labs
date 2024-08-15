@@ -6,8 +6,8 @@ CHANGE REPLICATION SOURCE TO
 	SOURCE_USER='replica_user',
 	SOURCE_PASSWORD='rep_password',
 	SOURCE_LOG_FILE='master.000003',
-	SOURCE_LOG_POS=158,
-	SOURCE_DELAY=30;
+	SOURCE_LOG_POS=158;
+	-- SOURCE_DELAY=30;
 
 START REPLICA;
 SHOW REPLICA STATUS;
@@ -18,6 +18,7 @@ CREATE TABLE Person (
     last_name VARCHAR(50),
     age INT
 );
+drop table Person;
 
 INSERT INTO Person (first_name, last_name, age) VALUES
 ('John', 'Doe', 30),
