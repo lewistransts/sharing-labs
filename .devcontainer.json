@@ -1,0 +1,7 @@
+{
+  "image": "mcr.microsoft.com/devcontainers/base:1-bookworm",
+  "runArgs": ["--name", "sharing-labs-devcontainer"],
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  }
+}

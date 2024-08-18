@@ -32,7 +32,3 @@ services:
 
 networks:
   mysql_network:
-    ipam:
-      driver: default
-      config:
-        - subnet: 10.250.0.0/16
