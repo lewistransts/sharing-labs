@@ -1,0 +1,12 @@
+image: amazon/aws-cli
+
+pipelines:
+  default:
+    - step:
+        oidc: true
+        script:
+          - export AWS_REGION=ap-southeast-1
+          - export AWS_ROLE_ARN=arn:aws:iam::XXXXXXXXXXXX:role/oidc-authentication-example-bitbucket-role
+          - export AWS_WEB_IDENTITY_TOKEN_FILE=$(pwd)/web-identity-token
+          - echo $BITBUCKET_STEP_OIDC_TOKEN > $(pwd)/web-identity-token
+          - aws s3 cp ./oidc-bitbucket-authentication.txt s3://oidc-authentication-test/

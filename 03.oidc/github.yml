@@ -1,0 +1,32 @@
+name: Test OIDC Authentcation
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write   # This is required for requesting the JWT
+  contents: read    # This is required for actions/checkout
+
+env:
+  BUCKET_NAME: oidc-authentication-test
+  ROLE_ARN: arn:aws:iam::XXXXXXXXXXXX:role/oidc-authentication-test-github-role
+  AWS_REGION: ap-southeast-1
+
+jobs:
+  put_file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git clone the repository
+        uses: actions/checkout@v4
+
+      # Authenticate GitHub
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ env.ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      # Upload a file to AWS s3
+      - name:  Copy index.html to s3
+        run: |
+          aws s3 cp ./oidc-github-authentication.txt s3://${{ env.BUCKET_NAME }}/
