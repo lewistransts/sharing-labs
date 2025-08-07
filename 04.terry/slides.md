@@ -1,81 +1,106 @@
 ---
-# You can also start simply with 'default'
 theme: seriph
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
-background: https://cover.sli.dev
-# some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: "AgentCrew: Multi-Agent AI Orchestration"
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
+  ## AgentCrew Framework
+  Multi-Agent AI Assistant Framework for coordinated AI teamwork
 
-  Learn more at [Sli.dev](https://sli.dev)
-# apply unocss classes to the current slide
+  Learn more at [GitHub](https://github.com/AgentCrew)
+author: Tech Presentation
+keywords: AI, Multi-Agent, Framework, Orchestration
+presenter: true
+download: false
+exportFilename: agentcrew-presentation
+export:
+  format: pdf
+  timeout: 30000
+  dark: false
+  withClicks: false
+highlighter: shiki
+lineNumbers: true
+monaco: true
+remoteAssets: false
+selectable: true
+record: true
+layout: cover
+background: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2125&q=80"
 class: text-center
-# https://sli.dev/features/drawing
-drawings:
-  persist: false
-# slide transition: https://sli.dev/guide/animations.html#slide-transitions
-transition: slide-left
-# enable MDC Syntax: https://sli.dev/features/mdc
-mdc: true
-# open graph
-seoMeta:
-  # By default, Slidev will use ./og-image.png if it exists,
-  # or generate one from the first slide if not found.
-  ogImage: auto
-  # ogImage: https://cover.sli.dev
 ---
 
-# Welcome to Slidev
+# AgentCrew
 
-Presentation slides for developers
+## Multi-Agent AI Orchestration Framework
 
-<div @click="$slidev.nav.next" class="mt-12 py-1" hover:bg="white op-10">
-  Press Space for next page <carbon:arrow-right />
+<div class="pt-12">
+  <span @click="$slidev.nav.next" class="px-2 py-1 rounded cursor-pointer" hover="bg-white bg-opacity-10">
+    Transforming AI Collaboration <carbon:arrow-right class="inline"/>
+  </span>
 </div>
 
-<div class="abs-br m-6 text-xl">
-  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="slidev-icon-btn">
+<div class="abs-br m-6 flex gap-2">
+  <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" class="slidev-icon-btn">
-    <carbon:logo-github />
+  <a href="https://github.com/AgentCrew" target="_blank" alt="GitHub" title="Open in GitHub"
+    class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
+    <carbon-logo-github />
   </a>
 </div>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Welcome to the AgentCrew presentation! Today we'll explore how multi-agent AI systems are revolutionizing the way we approach complex technical challenges.
+
+This presentation will take you through:
+- The fundamental problems AgentCrew solves
+- Core architecture and capabilities
+- Real-world applications and benefits
 -->
 
 ---
-transition: fade-out
+layout: center
+class: text-center
 ---
 
-# What is Slidev?
+# Today's Journey
 
-Slidev is a slides maker and presenter designed for developers, consist of the following features
+<div class="grid grid-cols-2 gap-8 pt-8">
 
-- 📝 **Text-based** - focus on the content with Markdown, and then style them later
-- 🎨 **Themable** - themes can be shared and re-used as npm packages
-- 🧑‍💻 **Developer Friendly** - code highlighting, live coding with autocompletion
-- 🤹 **Interactive** - embed Vue components to enhance your expressions
-- 🎥 **Recording** - built-in recording and camera view
-- 📤 **Portable** - export to PDF, PPTX, PNGs, or even a hostable SPA
-- 🛠 **Hackable** - virtually anything that's possible on a webpage is possible in Slidev
-<br>
-<br>
+<div class="space-y-4">
 
-Read more about [Why Slidev?](https://sli.dev/guide/why)
+## 🎯 **Problem & Solution**
 
-<!--
-You can have `style` tag in markdown to override the style for the current page.
-Learn more: https://sli.dev/features/slide-scope-style
--->
+<div class="text-sm opacity-75">
+Understanding the multi-agent challenge
+</div>
+
+## 🏗️ **Architecture Deep Dive**
+
+<div class="text-sm opacity-75">
+Core features and capabilities
+</div>
+
+</div>
+
+<div class="space-y-4">
+
+## 🚀 **Live Demonstration**
+
+<div class="text-sm opacity-75">
+See AgentCrew in action
+</div>
+
+## 💡 **Q&A & Discussion**
+
+<div class="text-sm opacity-75">
+Your questions answered
+</div>
+
+</div>
+
+</div>
 
 <style>
-h1 {
+h2 {
   background-color: #2B90B6;
   background-image: linear-gradient(45deg, #4EC5D4 10%, #146b8c 20%);
   background-size: 100%;
@@ -84,558 +109,1000 @@ h1 {
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
 }
-</style>
 
-<!--
-Here is another comment.
--->
-
----
-transition: slide-up
-level: 2
----
-
-# Navigation
-
-Hover on the bottom-left corner to see the navigation's controls panel, [learn more](https://sli.dev/guide/ui#navigation-bar)
-
-## Keyboard Shortcuts
-
-|                                                     |                             |
-| --------------------------------------------------- | --------------------------- |
-| <kbd>right</kbd> / <kbd>space</kbd>                 | next animation or slide     |
-| <kbd>left</kbd>  / <kbd>shift</kbd><kbd>space</kbd> | previous animation or slide |
-| <kbd>up</kbd>                                       | previous slide              |
-| <kbd>down</kbd>                                     | next slide                  |
-
-<!-- https://sli.dev/guide/animations.html#click-animation -->
-<img
-  v-click
-  class="absolute -bottom-9 -left-7 w-80 opacity-50"
-  src="https://sli.dev/assets/arrow-bottom-left.svg"
-  alt=""
-/>
-<p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
-
----
-layout: two-cols
-layoutClass: gap-16
----
-
-# Table of contents
-
-You can use the `Toc` component to generate a table of contents for your slides:
-
-```html
-<Toc minDepth="1" maxDepth="1" />
-```
-
-The title will be inferred from your slide content, or you can override it with `title` and `level` in your frontmatter.
-
-::right::
-
-<Toc text-sm minDepth="1" maxDepth="2" />
-
----
-layout: image-right
-image: https://cover.sli.dev
----
-
-# Code
-
-Use code snippets and get the highlighting directly, and even types hover!
-
-```ts [filename-example.ts] {all|4|6|6-7|9|all} twoslash
-// TwoSlash enables TypeScript hover information
-// and errors in markdown code blocks
-// More at https://shiki.style/packages/twoslash
-import { computed, ref } from 'vue'
-
-const count = ref(0)
-const doubled = computed(() => count.value * 2)
-
-doubled.value = 2
-```
-
-<arrow v-click="[4, 5]" x1="350" y1="310" x2="195" y2="342" color="#953" width="2" arrowSize="1" />
-
-<!-- This allow you to embed external code blocks -->
-<<< @/snippets/external.ts#snippet
-
-<!-- Footer -->
-
-[Learn more](https://sli.dev/features/line-highlighting)
-
-<!-- Inline style -->
-<style>
-.footnotes-sep {
-  @apply mt-5 opacity-10;
+/* Prevent text overflow */
+.slidev-layout {
+  overflow: hidden;
 }
-.footnotes {
-  @apply text-sm opacity-75;
+
+/* Ensure code blocks fit */
+pre {
+  font-size: 0.85em !important;
+  overflow-x: auto;
+  max-width: 100%;
 }
-.footnote-backref {
-  display: none;
+
+/* Responsive grid adjustments */
+.grid {
+  gap: 1rem !important;
+}
+
+/* Mermaid diagram scaling */
+.mermaid {
+  max-width: 100% !important;
+  height: auto !important;
 }
 </style>
 
 <!--
-Notes can also sync with clicks
+Our agenda today covers four key areas:
 
-[click] This will be highlighted after the first click
+1. First, we'll establish the problem space and how AgentCrew provides a solution
+2. Then dive deep into the architecture and technical capabilities
+3. See a live demonstration of the framework in action
+4. Finally, open discussion for your questions
 
-[click] Highlighted with `count = ref(0)`
-
-[click:3] Last click (skip two clicks)
+Let's begin with understanding the challenge that led to AgentCrew's creation.
 -->
 
 ---
-level: 2
+layout: default
 ---
 
-# Shiki Magic Move
+# 🎯 The Challenge We Face
 
-Powered by [shiki-magic-move](https://shiki-magic-move.netlify.app/), Slidev supports animations across multiple code snippets.
+<div class="grid grid-cols-2 gap-8">
 
-Add multiple code blocks and wrap them with <code>````md magic-move</code> (four backticks) to enable the magic move. For example:
-
-````md magic-move {lines: true}
-```ts {*|2|*}
-// step 1
-const author = reactive({
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-})
-```
-
-```ts {*|1-2|3-4|3-4,8}
-// step 2
-export default {
-  data() {
-    return {
-      author: {
-        name: 'John Doe',
-        books: [
-          'Vue 2 - Advanced Guide',
-          'Vue 3 - Basic Guide',
-          'Vue 4 - The Mystery'
-        ]
-      }
-    }
-  }
-}
-```
-
-```ts
-// step 3
-export default {
-  data: () => ({
-    author: {
-      name: 'John Doe',
-      books: [
-        'Vue 2 - Advanced Guide',
-        'Vue 3 - Basic Guide',
-        'Vue 4 - The Mystery'
-      ]
-    }
-  })
-}
-```
-
-Non-code blocks are ignored.
-
-```vue
-<!-- step 4 -->
-<script setup>
-const author = {
-  name: 'John Doe',
-  books: [
-    'Vue 2 - Advanced Guide',
-    'Vue 3 - Basic Guide',
-    'Vue 4 - The Mystery'
-  ]
-}
-</script>
-```
-````
-
----
-
-# Components
-
-<div grid="~ cols-2 gap-4">
 <div>
 
-You can use Vue components directly inside your slides.
+## **Complex Tasks = Multiple Specializations**
 
-We have provided a few built-in components like `<Tweet/>` and `<Youtube/>` that you can use directly. And adding your custom components is also super easy.
+<v-clicks>
 
-```html
-<Counter :count="10" />
-```
+- 🔍 **Research** → Data gathering & analysis
+- 💻 **Development** → Code implementation
+- 🏗️ **Architecture** → System design
+- 📊 **DevOps** → Infrastructure management
+- 📝 **Documentation** → Technical writing
 
-<!-- ./components/Counter.vue -->
-<Counter :count="10" m="t-4" />
-
-Check out [the guides](https://sli.dev/builtin/components.html) for more.
-
-</div>
-<div>
-
-```html
-<Tweet id="1390115482657726468" />
-```
-
-<Tweet id="1390115482657726468" scale="0.65" />
-
-</div>
-</div>
-
-<!--
-Presenter note with **bold**, *italic*, and ~~striked~~ text.
-
-Also, HTML elements are valid:
-<div class="flex w-full">
-  <span style="flex-grow: 1;">Left content</span>
-  <span>Right content</span>
-</div>
--->
-
----
-class: px-20
----
-
-# Themes
-
-Slidev comes with powerful theming support. Themes can provide styles, layouts, components, or even configurations for tools. Switching between themes by just **one edit** in your frontmatter:
-
-<div grid="~ cols-2 gap-2" m="t-2">
-
-```yaml
----
-theme: default
----
-```
-
-```yaml
----
-theme: seriph
----
-```
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-default/01.png?raw=true" alt="">
-
-<img border="rounded" src="https://github.com/slidevjs/themes/blob/main/screenshots/theme-seriph/01.png?raw=true" alt="">
+</v-clicks>
 
 </div>
 
-Read more about [How to use a theme](https://sli.dev/guide/theme-addon#use-theme) and
-check out the [Awesome Themes Gallery](https://sli.dev/resources/theme-gallery).
+<div v-click="6">
 
----
+## **Current AI Limitations**
 
-# Clicks Animations
-
-You can add `v-click` to elements to add a click animation.
-
-<div v-click>
-
-This shows up when you click the slide:
-
-```html
-<div v-click>This shows up when you click the slide.</div>
-```
-
-</div>
-
-<br>
-
-<v-click>
-
-The <span v-mark.red="3"><code>v-mark</code> directive</span>
-also allows you to add
-<span v-mark.circle.orange="4">inline marks</span>
-, powered by [Rough Notation](https://roughnotation.com/):
-
-```html
-<span v-mark.underline.orange>inline markers</span>
-```
-
-</v-click>
-
-<div mt-20 v-click>
-
-[Learn more](https://sli.dev/guide/animations#click-animation)
-
-</div>
-
----
-
-# Motions
-
-Motion animations are powered by [@vueuse/motion](https://motion.vueuse.org/), triggered by `v-motion` directive.
-
-```html
-<div
-  v-motion
-  :initial="{ x: -80 }"
-  :enter="{ x: 0 }"
-  :click-3="{ x: 80 }"
-  :leave="{ x: 1000 }"
->
-  Slidev
-</div>
-```
-
-<div class="w-60 relative">
-  <div class="relative w-40 h-40">
-    <img
-      v-motion
-      :initial="{ x: 800, y: -100, scale: 1.5, rotate: -50 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-square.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ y: 500, x: -100, scale: 2 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-circle.png"
-      alt=""
-    />
-    <img
-      v-motion
-      :initial="{ x: 600, y: 400, scale: 2, rotate: 100 }"
-      :enter="final"
-      class="absolute inset-0"
-      src="https://sli.dev/logo-triangle.png"
-      alt=""
-    />
-  </div>
-
-  <div
-    class="text-5xl absolute top-14 left-40 text-[#2B90B6] -z-1"
-    v-motion
-    :initial="{ x: -80, opacity: 0}"
-    :enter="{ x: 0, opacity: 1, transition: { delay: 2000, duration: 1000 } }">
-    Slidev
-  </div>
-</div>
-
-<!-- vue script setup scripts can be directly used in markdown, and will only affects current page -->
-<script setup lang="ts">
-const final = {
-  x: 0,
-  y: 0,
-  rotate: 0,
-  scale: 1,
-  transition: {
-    type: 'spring',
-    damping: 10,
-    stiffness: 20,
-    mass: 2
-  }
-}
-</script>
-
-<div
-  v-motion
-  :initial="{ x:35, y: 30, opacity: 0}"
-  :enter="{ y: 0, opacity: 1, transition: { delay: 3500 } }">
-
-[Learn more](https://sli.dev/guide/animations.html#motion)
-
-</div>
-
----
-
-# LaTeX
-
-LaTeX is supported out-of-box. Powered by [KaTeX](https://katex.org/).
-
-<div h-3 />
-
-Inline $\sqrt{3x-1}+(1+x)^2$
-
-Block
-$$ {1|3|all}
-\begin{aligned}
-\nabla \cdot \vec{E} &= \frac{\rho}{\varepsilon_0} \\
-\nabla \cdot \vec{B} &= 0 \\
-\nabla \times \vec{E} &= -\frac{\partial\vec{B}}{\partial t} \\
-\nabla \times \vec{B} &= \mu_0\vec{J} + \mu_0\varepsilon_0\frac{\partial\vec{E}}{\partial t}
-\end{aligned}
-$$
-
-[Learn more](https://sli.dev/features/latex)
-
----
-
-# Diagrams
-
-You can create diagrams / graphs from textual descriptions, directly in your Markdown.
-
-<div class="grid grid-cols-4 gap-5 pt-4 -mb-6">
-
-```mermaid {scale: 0.5, alt: 'A simple sequence diagram'}
-sequenceDiagram
-    Alice->John: Hello John, how are you?
-    Note over Alice,John: A typical interaction
-```
-
-```mermaid {theme: 'neutral', scale: 0.8}
+```mermaid {scale: 0.4}
 graph TD
-B[Text] --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-```mermaid
-mindmap
-  root((mindmap))
-    Origins
-      Long history
-      ::icon(fa fa-book)
-      Popularisation
-        British popular psychology author Tony Buzan
-    Research
-      On effectiveness<br/>and features
-      On Automatic creation
-        Uses
-            Creative techniques
-            Strategic planning
-            Argument mapping
-    Tools
-      Pen and paper
-      Mermaid
-```
-
-```plantuml {scale: 0.7}
-@startuml
-
-package "Some Group" {
-  HTTP - [First Component]
-  [Another Component]
-}
-
-node "Other Groups" {
-  FTP - [Second Component]
-  [First Component] --> FTP
-}
-
-cloud {
-  [Example 1]
-}
-
-database "MySql" {
-  folder "This is my folder" {
-    [Folder 3]
-  }
-  frame "Foo" {
-    [Frame 4]
-  }
-}
-
-[Another Component] --> [Example 1]
-[Example 1] --> [Folder 3]
-[Folder 3] --> [Frame 4]
-
-@enduml
+    A[Complex Task] --> B[Single AI Agent]
+    B --> C{Can Handle?}
+    C -->|Yes| D[✅ Success]
+    C -->|No| E[❌ Limitations]
+    E --> F[Manual Fix]
+    E --> G[Failure]
+    E --> H[Incomplete]
 ```
 
 </div>
 
-Learn more: [Mermaid Diagrams](https://sli.dev/features/mermaid) and [PlantUML Diagrams](https://sli.dev/features/plantuml)
+</div>
+
+<div v-click="7" class="mt-8 p-4 bg-red-50 border-l-4 border-red-400 dark:bg-red-900/20">
+<h3 class="text-red-700 dark:text-red-300">💡 The Problem</h3>
+
+**Single agents hit walls** → **Fragmented workflows** → **Inefficient outcomes**
+
+</div>
+
+<!--
+Let's start by understanding the fundamental challenge in AI assistance today.
+
+Modern technical work requires multiple specializations - from research and development to architecture and documentation. Each domain has its own complexity, tools, and best practices.
+
+Current AI systems typically use single agents that try to handle everything. While impressive, they inevitably hit limitations when faced with multi-step workflows that require different types of expertise.
+
+This leads to fragmented workflows, manual intervention, and often incomplete results. We need a better approach.
+-->
 
 ---
-foo: bar
-dragPos:
-  square: 691,32,167,_,-16
+layout: default
 ---
 
-# Draggable Elements
+# **Scattered Tools & Inconsistent Interfaces**
 
-Double-click on the draggable elements to edit their positions.
+<div class="grid grid-cols-2 gap-8">
 
-<br>
+<div>
 
-###### Directive Usage
+## **Current Reality**
 
-```md
-<img v-drag="'square'" src="https://sli.dev/logo.png">
+<v-clicks>
+
+- 🔧 **Multiple Tools**
+  - ChatGPT for queries
+  - GitHub Copilot for code
+  - Claude for analysis
+  - Custom automation
+
+- 🔄 **Context Switching**
+  - Manual data transfer
+  - Repeated explanations
+  - Lost conversation history
+  - Fragmented workflows
+
+</v-clicks>
+
+</div>
+
+<div v-click="3">
+
+## **The Coordination Problem**
+
+```mermaid {scale: 0.6}
+graph TB
+    Dev[👨‍💻 Developer] --> ChatGPT[🤖 GPT]
+    Dev --> Copilot[🐙 Copilot]
+    Dev --> Claude[🟣 Claude]
+    Dev --> Scripts[📜 Scripts]
+
+    ChatGPT -.->|Manual| Copilot
+    Copilot -.->|Lost| Claude
+    Claude -.->|Reset| Scripts
+
+    style Dev fill:#e1f5fe
+    style ChatGPT fill:#fff3e0
+    style Copilot fill:#f3e5f5
+    style Claude fill:#e8f5e8
+    style Scripts fill:#fce4ec
 ```
 
-<br>
+</div>
 
-###### Component Usage
+</div>
 
-```md
-<v-drag text-3xl>
-  <div class="i-carbon:arrow-up" />
-  Use the `v-drag` component to have a draggable container!
-</v-drag>
-```
+<div v-click="4" class="mt-8 p-4 bg-orange-50 border-l-4 border-orange-400 dark:bg-orange-900/20">
+<h3 class="text-orange-700 dark:text-orange-300">⚡ The Solution Needed</h3>
 
-<v-drag pos="663,206,261,_,-15">
-  <div text-center text-3xl border border-main rounded>
-    Double-click me!
-  </div>
-</v-drag>
+**Unified coordination** → **Shared context** → **Seamless workflows**
 
-<img v-drag="'square'" src="https://sli.dev/logo.png">
+</div>
 
-###### Draggable Arrow
+<!--
+Beyond individual agent limitations, we face a broader coordination problem.
 
-```md
-<v-drag-arrow two-way />
-```
+In today's reality, developers juggle multiple AI tools - ChatGPT for general queries, GitHub Copilot for coding, Claude for analysis, plus various custom scripts for automation.
 
-<v-drag-arrow pos="67,452,253,46" two-way op70 />
+This creates significant overhead:
+- Constant context switching between tools
+- Manual data transfer between systems
+- Repeated explanations as context is lost
+- Fragmented workflows that break concentration
 
----
-src: ./pages/imported-slides.md
-hide: false
----
+The diagram shows how information flows (or fails to flow) between these disconnected tools. Each transition loses context and requires manual intervention.
 
----
-
-# Monaco Editor
-
-Slidev provides built-in Monaco Editor support.
-
-Add `{monaco}` to the code block to turn it into an editor:
-
-```ts {monaco}
-import { ref } from 'vue'
-import { emptyArray } from './external'
-
-const arr = ref(emptyArray(10))
-```
-
-Use `{monaco-run}` to create an editor that can execute the code directly in the slide:
-
-```ts {monaco-run}
-import { version } from 'vue'
-import { emptyArray, sayHello } from './external'
-
-sayHello()
-console.log(`vue ${version}`)
-console.log(emptyArray<number>(10).reduce(fib => [...fib, fib.at(-1)! + fib.at(-2)!], [1, 1]))
-```
+What we need is unified coordination with shared context to enable truly seamless workflows.
+-->
 
 ---
 layout: center
 class: text-center
 ---
 
-# Learn More
+# **What is AgentCrew?**
 
-[Documentation](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/resources/showcases)
+<div v-click="1" class="text-6xl mb-8">🤖🤝🤖</div>
 
-<PoweredBySlidev mt-10 />
+<div v-click="2">
+
+## **Multi-Agent AI Assistant Framework**
+
+<div class="grid grid-cols-3 gap-6 mt-12">
+
+<div class="text-center">
+<div class="text-3xl mb-4">👥</div>
+<h3>Specialist Agents</h3>
+<p class="text-sm opacity-75">Each with focused expertise</p>
+</div>
+
+<div class="text-center">
+<div class="text-3xl mb-4">🔗</div>
+<h3>Seamless Coordination</h3>
+<p class="text-sm opacity-75">Intelligent task delegation</p>
+</div>
+
+<div class="text-center">
+<div class="text-3xl mb-4">🌐</div>
+<h3>Provider Agnostic</h3>
+<p class="text-sm opacity-75">Works with any AI model</p>
+</div>
+
+</div>
+
+</div>
+
+<div v-click="3" class="mt-12 text-xl font-semibold text-blue-600 dark:text-blue-400">
+Open Source Solution for AI Orchestration
+</div>
+
+<!--
+AgentCrew is our answer to these challenges.
+
+At its core, AgentCrew is a multi-agent AI assistant framework that enables specialist agents to work together seamlessly. Think of it as assembling an expert team where each member has deep knowledge in their domain.
+
+The key differentiators are:
+- Specialist agents with focused expertise
+- Seamless coordination through intelligent task delegation
+- Provider-agnostic architecture that works with any AI model
+
+And it's completely open source, making advanced AI orchestration accessible to everyone.
+
+Now let's dive into how this actually works under the hood.
+-->
+
+---
+layout: section
+---
+
+# 🏗️ Core Architecture & Features
+
+---
+layout: two-cols
+---
+
+# **Multi-Agent System Design**
+
+<div class="space-y-6">
+
+## **🎭 Role-Based Specialization**
+
+<v-clicks>
+
+- **Research Agent** → Information gathering
+- **Development Agent** → Code implementation
+- **Architecture Agent** → System design
+- **DevOps Agent** → Infrastructure
+- **Documentation Agent** → Technical writing
+
+</v-clicks>
+
+<div v-click="6" class="mt-8">
+
+## **🔄 Smart Coordination**
+
+- Context-aware task delegation
+- Seamless agent handoffs
+- Shared memory and state
+
+</div>
+
+</div>
+
+::right::
+
+<div v-click="7">
+
+```mermaid {scale: 0.55}
+graph TB
+    User[👤 User] --> Planner[🧠 Planner]
+
+    Planner --> Research[🔍 Research]
+    Planner --> Architect[🏗️ Architect]
+    Planner --> Engineer[💻 Engineer]
+    Planner --> DevOps[⚙️ DevOps]
+    Planner --> Docs[📝 Docs]
+
+    Research --> MCP[📡 MCP]
+    Architect --> MCP
+    Engineer --> MCP
+    DevOps --> MCP
+    Docs --> MCP
+
+    MCP --> Memory[(🧠 Memory)]
+    MCP --> Tools[🛠️ Tools]
+
+    style Planner fill:#e1f5fe
+    style MCP fill:#f3e5f5
+    style Memory fill:#e8f5e8
+    style Tools fill:#fff3e0
+```
+
+</div>
+
+<!--
+The architecture is built around role-based specialization. Each agent has deep expertise in their domain - research, development, architecture, DevOps, and documentation.
+
+The magic happens in the coordination layer. A PlannerAgent analyzes incoming requests and intelligently delegates tasks to the appropriate specialists.
+
+The Model Context Protocol (MCP) serves as the communication backbone, enabling:
+- Standardized messaging between agents
+- Shared memory for maintaining context
+- Unified access to the tool ecosystem
+
+This creates a system where agents can work independently while staying perfectly coordinated.
+-->
+
+---
+layout: default
+---
+
+# **🔌 Tools and Model Context Protocol (MCP)**
+
+<div class="grid grid-cols-2 gap-8">
+
+<div>
+
+## **What are MCP Servers?**
+
+<v-clicks>
+
+- 🔌 **Model Context Protocol (MCP)** - Open standard by Anthropic
+- 🌉 **Bridge between AI models and external tools**
+- 📦 **Standardized server implementations** for different services
+- 🔒 **Secure, controlled access** to local and remote resources
+- 🛠️ **Tool discovery and invocation** through unified interface
+
+</v-clicks>
+
+<div v-click="6" class="mt-4 p-3 bg-blue-50 border-l-4 border-blue-400 dark:bg-blue-900/20">
+<h4 class="text-blue-700 dark:text-blue-300 text-sm">💡 Think of MCP as...</h4>
+<div class="text-xs mt-1">A universal translator that lets AI agents safely talk to databases, APIs, file systems, and more through a common language</div>
+</div>
+
+</div>
+
+<div v-click="7">
+
+## **MCP Ecosystem**
+
+```mermaid {scale: 0.5}
+graph TB
+    AI[🤖 AI Agent] --> MCP[📡 MCP Layer]
+    
+    MCP --> FS[📁 File Systems]
+    MCP --> DB[🗄️ Databases]
+    MCP --> API[🌐 Web APIs]
+    MCP --> TOOL[🛠️ Dev Tools]
+    
+    FS --> Local[Local Files]
+    FS --> Cloud[Cloud Storage]
+    
+    DB --> SQL[PostgreSQL]
+    DB --> NoSQL[MongoDB]
+    
+    API --> REST[REST APIs]
+    API --> GraphQL[GraphQL]
+    
+    TOOL --> Git[Git/GitHub]
+    TOOL --> CI[CI/CD]
+
+    style MCP fill:#e1f5fe
+    style AI fill:#f3e5f5
+```
+
+</div>
+
+</div>
+
+---
+layout: default
+---
+
+# **🌟 Awesome MCP Servers**
+
+<div class="text-xs mb-4 opacity-75">Source: <a href="https://github.com/punkpeye/awesome-mcp-servers" target="_blank">github.com/punkpeye/awesome-mcp-servers</a> (62k+ stars)</div>
+
+<div class="grid grid-cols-3 gap-4 text-xs">
+
+<div>
+
+### **📂 File Systems & Cloud**
+- **Local Files** - Direct file system access
+- **Google Drive** - Cloud file management
+- **AWS S3** - Object storage
+- **Box/Dropbox** - Cloud sync platforms
+
+### **🗄️ Databases**
+- **PostgreSQL/MySQL** - Relational databases
+- **MongoDB** - NoSQL document store
+- **Redis** - In-memory cache
+- **BigQuery/Snowflake** - Data warehouses
+
+</div>
+
+<div>
+
+### **🔄 Development & DevOps**
+- **GitHub/GitLab** - Code repositories
+- **Docker** - Container management
+- **Kubernetes** - Orchestration
+- **Jira/Linear** - Project management
+
+### **🌐 Communication**
+- **Slack/Teams** - Team messaging
+- **Gmail/Outlook** - Email systems
+- **Telegram/Discord** - Chat platforms
+- **Notion** - Documentation
+
+</div>
+
+<div>
+
+### **🔍 Search & Analytics**
+- **Google Search** - Web search
+- **Brave Search** - Private search
+- **Elasticsearch** - Full-text search
+- **Grafana** - Monitoring dashboards
+
+### **🤖 AI & ML Services**
+- **OpenAI** - GPT models
+- **Anthropic** - Claude models
+- **Vector Databases** - Embeddings
+- **HuggingFace** - ML models
+
+</div>
+
+</div>
+
+<div v-click="1" class="mt-6 p-4 bg-green-50 border-l-4 border-green-400 dark:bg-green-900/20">
+<h3 class="text-green-700 dark:text-green-300 text-sm">🚀 3,000+ Pre-built Servers Available</h3>
+<div class="text-xs mt-1">From file systems to AI services - if it has an API, there's likely an MCP server for it</div>
+</div>
+
+---
+layout: default
+---
+
+# **🛠️ AgentCrew's Available Tools**
+
+<div>
+
+## **Core Built-in Tools**
+
+<v-clicks>
+
+- 🔍 **Web Search** - Real-time information gathering via Brave/Tavily
+- 📋 **Clipboard Access** - Read/write system clipboard
+- 🧠 **Memory Management** - Persistent conversation context
+- 📊 **Code Analysis** - Repository understanding & insights
+
+</v-clicks>
+
+</div>
+
+---
+layout: default
+---
+
+# **🚀 YOLO Mode (You Only Live Once)**
+
+## **⚡ Autonomous Execution**
+
+- ⚡ **No Approval Dialogs** - Agents execute tools immediately
+- 🎯 **Uninterrupted Workflow** - Agents work without human intervention
+- 🏃 **Maximum Speed** - Rapid tool chaining and execution
+- 🔧 **Developer Mode** - Perfect for trusted development environments
+
+
+---
+---
+## **🛡️ Safety Considerations**
+
+<div class="space-y-4">
+
+**Required Conditions:**
+- 🔐 **Trusted Environment Only**
+- 👤 **Authenticated Users**
+- 🏢 **Controlled Infrastructure**
+
+**Built-in Safeguards:**
+- 📝 **Complete Audit Logs** - All actions tracked
+- 🛑 **Emergency Stop** - Immediate termination capability
+- 🎛️ **Configurable Limits** - Resource and scope boundaries
+- 🔍 **Real-time Monitoring** - Action visibility
+
+</div>
+
+<div class="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 dark:bg-yellow-900/20">
+<h3 class="text-yellow-700 dark:text-yellow-300">⚖️ Balance: Power vs Control</h3>
+<div class="text-sm mt-1">YOLO mode offers maximum efficiency but requires careful consideration of security implications</div>
+</div>
+
+---
+layout: default
+---
+
+# **⚡ Tool Approval Mode**
+
+## **🛡️ Default: Tool Approval Mode**
+
+- 🔒 **User Control** - Manual approval for each tool call
+- 📋 **Approval Dialog** - Shows tool name, purpose, and parameters
+- ✅ **Granular Decisions** - Approve once, always, or deny
+- 🔄 **Persistent Memory** - Remembers approved tools per session
+- 🚨 **Safety First** - Prevents unintended actions
+
+## **✨ Key Benefits:**
+- 🎯 **Granular Control** over agent actions
+- 📊 **Audit Trail** for all decisions
+- 🛡️ **Security** by default
+
+---
+layout: default
+---
+
+# **🤖 AI Provider Support**
+
+<div class="grid grid-cols-3 gap-4">
+
+<div v-click="1" class="text-center p-3 border-2 border-blue-200 rounded-lg dark:border-blue-800">
+<div class="text-2xl mb-2">🟢</div>
+<h3 class="text-sm mb-2">**OpenAI**</h3>
+<div class="text-xs space-y-0.5">
+<div>GPT-3.5 • GPT-4</div>
+<div>GPT-4 Turbo • GPT-4o</div>
+</div>
+</div>
+
+<div v-click="2" class="text-center p-3 border-2 border-purple-200 rounded-lg dark:border-purple-800">
+<div class="text-2xl mb-2">🟣</div>
+<h3 class="text-sm mb-2">**Anthropic**</h3>
+<div class="text-xs space-y-0.5">
+<div>Claude 3 Haiku</div>
+<div>Claude 3.5 Sonnet</div>
+</div>
+</div>
+
+<div v-click="3" class="text-center p-3 border-2 border-yellow-200 rounded-lg dark:border-yellow-800">
+<div class="text-2xl mb-2">🔵</div>
+<h3 class="text-sm mb-2">**Google**</h3>
+<div class="text-xs space-y-0.5">
+<div>Gemini Pro</div>
+<div>Gemini Flash</div>
+</div>
+</div>
+
+</div>
+
+<div class="grid grid-cols-2 gap-4 mt-6">
+
+<div v-click="4" class="text-center p-3 border-2 border-gray-200 rounded-lg dark:border-gray-800">
+<div class="text-2xl mb-2">🐙</div>
+<h3 class="text-sm mb-2">**GitHub Copilot**</h3>
+<div class="text-xs">Enterprise integration</div>
+</div>
+
+<div v-click="5" class="text-center p-3 border-2 border-green-200 rounded-lg dark:border-green-800">
+<div class="text-2xl mb-2">🔧</div>
+<h3 class="text-sm mb-2">**Provider Agnostic**</h3>
+<div class="text-xs">Pluggable architecture</div>
+</div>
+
+</div>
+
+<div v-click="6" class="mt-6 p-3 bg-green-50 border-l-4 border-green-400 dark:bg-green-900/20">
+<h3 class="text-green-700 dark:text-green-300 text-sm">✨ Smart Model Selection</h3>
+<div class="text-xs mt-1">Agents automatically choose the **optimal model** for each task type and complexity</div>
+</div>
+
+<!--
+One of AgentCrew's major strengths is its provider-agnostic architecture. You're not locked into any single AI provider.
+
+The framework supports all major providers - OpenAI's GPT family, Anthropic's Claude models, Google's Gemini, and even GitHub Copilot for enterprise scenarios.
+
+But here's the key advantage: agents can automatically select the optimal model for each specific task. A research agent might use GPT-4 for complex analysis, while a code generation task might leverage Claude 3.5 Sonnet for its superior coding capabilities.
+
+This flexibility ensures you always get the best performance while managing costs effectively.
+-->
+
+---
+layout: default
+---
+
+# **🧠 Adaptive Behaviors System**
+
+<div>
+
+## **"when...do..." Rule System**
+
+```yaml {1-2|4-6|8-10|12-14}
+# User preference adaptation
+when: user mentions "deadline"
+do: prioritize speed over details
+
+# Technical context awareness  
+when: user asks about "code"
+do: provide complete examples
+    include syntax highlighting
+
+# Communication style learning
+when: user prefers "visual"
+do: include diagrams
+
+# Domain-specific behaviors
+when: user works with "kubernetes"
+do: suggest kubectl commands
+```
+
+</div>
+
+
+## **Learning Categories**
+
+<v-clicks>
+
+- 🎯 **User Preferences**
+  - Communication style
+  - Detail preferences
+  - Interaction patterns
+
+- 📝 **Task Patterns**
+  - Recurring workflows
+  - Domain needs
+  - Tool preferences
+
+- 🔄 **Context Triggers**
+  - Environmental awareness
+  - Situational adaptations
+
+</v-clicks>
+
+<div v-click="4" class="mt-6">
+
+```typescript {1|2-4|5-6}
+// Real-time adaptation example
+const behavior = await adaptBehavior({
+  trigger: "user_mentions_performance",
+  action: "include_benchmarks",
+  context: "web_development"
+});
+```
+
+</div>
+
+<!--
+The adaptive behaviors system is what makes AgentCrew truly intelligent over time. It learns from your interactions and adapts to your working style.
+
+The system uses a simple but powerful "when...do..." rule format. For example:
+- When you mention deadlines, it prioritizes speed
+- When you ask about code, it provides complete executable examples
+- When you prefer visual explanations, it includes diagrams
+
+These behaviors cover three main categories:
+- User preferences for communication and detail
+- Task patterns for recurring workflows
+- Context triggers for situational awareness
+
+The system continuously learns and refines these behaviors, making each interaction more efficient than the last.
+-->
+
+---
+layout: default
+---
+
+## **Permission Controls**
+
+<v-clicks>
+
+- 🔒 **Granular Permissions**
+  - Tool-specific access control
+  - Risk-based approval workflows
+  - User-defined safety boundaries
+
+- 📊 **Audit Trail**
+  - Complete action logging
+  - Decision tracking
+  - Compliance reporting
+
+- ⚡ **Smart Automation**
+  - Low-risk auto-approval
+  - Pattern-based trust
+  - Emergency stop capabilities
+
+</v-clicks>
+
+<div v-click="4" class="mt-8 p-4 bg-yellow-50 border-l-4 border-yellow-400 dark:bg-yellow-900/20">
+<h3 class="text-yellow-700 dark:text-yellow-300">🛡️ Safety First</h3>
+
+**You remain in control** - agents request permission for sensitive operations
+
+</div>
+
+<!--
+Safety and user control are paramount in AgentCrew's design. While agents are intelligent and autonomous, you always maintain ultimate control.
+
+The tool approval system categorizes actions by risk level. Low-risk operations like reading files can be auto-approved, while high-risk operations like system modifications require explicit user confirmation.
+
+The permission system provides:
+- Granular control over what each agent can do
+- Complete audit trails for compliance and debugging
+- Smart automation that learns your approval patterns
+
+The key principle is that you remain in control. Agents will request permission for sensitive operations, explain their reasoning, and respect your boundaries.
+
+This ensures powerful automation without sacrificing safety or oversight.
+-->
+
+---
+layout: two-cols
+---
+
+# **💻 Dual Interfaces**
+
+## **Console Interface**
+
+<div class="space-y-4">
+
+<v-clicks>
+
+- 🖥️ **Command-line power**
+- ⚡ **Rapid interaction**
+- 🔧 **Scriptable workflows**
+- 🎯 **Developer-friendly**
+
+</v-clicks>
+
+</div>
+
+<div v-click="5" class="mt-6">
+
+```bash
+$ agentcrew start
+🤖 AgentCrew initialized
+
+$ ask "Analyze React app structure"
+🔍 Research: Scanning project...
+🏗️ Architect: Analyzing patterns...
+📝 Report: ./analysis.md
+
+$ deploy --env staging
+⚙️ DevOps: Deploying to staging...
+✅ Deployment successful
+```
+
+</div>
+
+::right::
+
+<div v-click="6">
+
+## **GUI Interface**
+
+<div class="space-y-4">
+
+- 👁️ **Visual monitoring**
+- 📊 **Real-time dashboards**
+- 🎮 **Interactive controls**
+- 📱 **User-friendly experience**
+
+</div>
+
+<div class="mt-6 p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700">
+
+```
+┌─ AgentCrew Dashboard ─────────┐
+│ 🟢 5 Agents Active           │
+│                               │
+│ Current Tasks:                │
+│ ├── 🔍 Research: Scraping     │
+│ ├── 💻 Engineer: API dev      │
+│ └── 📝 Docs: Writing guide    │
+│                               │
+│ [Approve] [Monitor] [Config]  │
+└───────────────────────────────┘
+```
+
+</div>
+
+</div>
+
+<!--
+AgentCrew provides dual interfaces to accommodate different user preferences and use cases.
+
+The console interface is perfect for power users and developers who prefer command-line efficiency. You can rapidly interact with agents, script workflows, and integrate with existing terminal-based development environments.
+
+The GUI interface provides visual monitoring with real-time dashboards, interactive controls, and a more user-friendly experience for those who prefer graphical interfaces.
+
+Both interfaces provide the same underlying functionality - it's about choosing the interaction style that fits your workflow best.
+
+This flexibility ensures AgentCrew adapts to how you work, rather than forcing you to adapt to it.
+-->
+
+---
+layout: center
+class: text-center
+---
+
+# **Architecture Summary**
+
+<div class="grid grid-cols-2 gap-12 mt-8">
+
+<div class="text-left">
+
+## **🏗️ Foundation**
+
+- Multi-agent specialization
+- MCP communication layer
+- Provider-agnostic design
+- Adaptive behavior learning
+
+</div>
+
+<div class="text-left">
+
+## **🚀 Capabilities**
+
+- Comprehensive tool ecosystem
+- User control & safety
+- Dual interface options
+- Seamless coordination
+
+</div>
+
+</div>
+
+<div class="mt-12 text-2xl font-semibold text-blue-600 dark:text-blue-400">
+**Next: See AgentCrew in Action** 🎬
+</div>
+
+<!--
+Let's summarize what we've covered about AgentCrew's architecture.
+
+The foundation is built on multi-agent specialization with the MCP communication layer, provider-agnostic design, and adaptive behavior learning.
+
+The capabilities include a comprehensive tool ecosystem, user control and safety mechanisms, dual interface options, and seamless coordination between agents.
+
+This architecture creates a framework that's both powerful and practical - capable of handling complex technical workflows while remaining safe and user-controlled.
+
+Now that we understand how AgentCrew works, let's see it in action with a live demonstration.
+-->
+
+---
+layout: end
+---
+
+# Thank You!
+
+## **Questions & Discussion**
+
+<div class="grid grid-cols-2 gap-8 mt-12">
+
+<div>
+
+### 🔗 **Resources**
+
+- Docs: `docs.agentcrew.ai`
+- GitHub: `github.com/agentcrew`
+- Discord: `discord.gg/agentcrew`
+
+</div>
+
+<div>
+
+### 💬 **Let's Discuss**
+
+- Implementation questions
+- Use case scenarios
+- Architecture deep dives
+- Contributing opportunities
+
+</div>
+
+</div>
+
+<div class="abs-br mx-14 my-12 flex">
+  <img src="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/logo-title.png" class="w-40">
+</div>
+
+<!--
+Thank you for your attention!
+
+I hope this overview of AgentCrew has shown you the potential of multi-agent AI orchestration. The combination of specialized agents, intelligent coordination, and comprehensive tool integration opens up exciting possibilities for technical workflows.
+
+We have resources available for further exploration, including comprehensive documentation, the open-source codebase on GitHub, and an active community on Discord.
+
+Now I'd love to hear your questions and discuss:
+- Any implementation questions you might have
+- Specific use case scenarios you're considering
+- Architecture details you'd like to explore further
+- Opportunities for contributing to the project
+
+What questions do you have about AgentCrew?
+-->
+
+---
+
+<style>
+/* Global styles to prevent overflow */
+.slidev-layout {
+  padding: 1rem !important;
+  overflow: hidden;
+}
+
+.slidev-layout h1 {
+  font-size: 2.5rem !important;
+  line-height: 1.2 !important;
+  margin-bottom: 1rem !important;
+}
+
+.slidev-layout h2 {
+  font-size: 1.8rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.slidev-layout h3 {
+  font-size: 1.4rem !important;
+  line-height: 1.3 !important;
+  margin-bottom: 0.6rem !important;
+}
+
+/* Code block improvements */
+.slidev-layout pre {
+  font-size: 0.75rem !important;
+  line-height: 1.4 !important;
+  overflow-x: auto;
+  max-width: 100%;
+  margin: 0.5rem 0 !important;
+}
+
+.slidev-layout code {
+  font-size: 0.8rem !important;
+  word-break: break-word;
+}
+
+/* Grid responsiveness */
+.grid {
+  gap: 0.75rem !important;
+}
+
+.grid-cols-2 > div {
+  min-width: 0; /* Allows flex items to shrink */
+}
+
+.grid-cols-3 > div {
+  min-width: 0;
+}
+
+/* Text size adjustments */
+.text-sm {
+  font-size: 0.8rem !important;
+}
+
+.text-xs {
+  font-size: 0.7rem !important;
+}
+
+/* Mermaid diagrams */
+.mermaid svg {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* Prevent content overflow */
+.space-y-4 > * + * {
+  margin-top: 0.75rem !important;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1rem !important;
+}
+
+/* List item spacing */
+li {
+  margin-bottom: 0.25rem !important;
+}
+
+/* Button and interactive elements */
+.px-2 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+/* Ensure diagrams don't overflow */
+.slidev-layout .mermaid {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+</style>
