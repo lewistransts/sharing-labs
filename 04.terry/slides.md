@@ -726,40 +726,6 @@ do: suggest kubectl commands
 
 </div>
 
-
-## **Learning Categories**
-
-<v-clicks>
-
-- 🎯 **User Preferences**
-  - Communication style
-  - Detail preferences
-  - Interaction patterns
-
-- 📝 **Task Patterns**
-  - Recurring workflows
-  - Domain needs
-  - Tool preferences
-
-- 🔄 **Context Triggers**
-  - Environmental awareness
-  - Situational adaptations
-
-</v-clicks>
-
-<div v-click="4" class="mt-6">
-
-```typescript {1|2-4|5-6}
-// Real-time adaptation example
-const behavior = await adaptBehavior({
-  trigger: "user_mentions_performance",
-  action: "include_benchmarks",
-  context: "web_development"
-});
-```
-
-</div>
-
 <!--
 The adaptive behaviors system is what makes AgentCrew truly intelligent over time. It learns from your interactions and adapts to your working style.
 
@@ -774,6 +740,68 @@ These behaviors cover three main categories:
 - Context triggers for situational awareness
 
 The system continuously learns and refines these behaviors, making each interaction more efficient than the last.
+-->
+
+---
+layout: default
+---
+
+# **📚 Learning Categories**
+
+<div>
+
+## **🧠 What Agents Learn About You**
+
+<div class="grid grid-cols-3 gap-6 mt-6">
+
+<div v-click="1">
+
+### **🎯 User Preferences**
+- Communication style preferences
+- Level of detail you prefer
+- Interaction patterns and habits
+
+</div>
+
+<div v-click="2">
+
+### **📝 Task Patterns**
+- Recurring workflows you use
+- Domain-specific needs
+- Tool preferences and shortcuts
+
+</div>
+
+<div v-click="3">
+
+### **🔄 Context Triggers**
+- Environmental awareness
+- Situational adaptations
+- Project-specific behaviors
+
+</div>
+
+</div>
+
+</div>
+
+<div v-click="5" class="mt-6 p-4 bg-blue-50 border-l-4 border-blue-400 dark:bg-blue-900/20">
+<h3 class="text-blue-700 dark:text-blue-300">💡 Continuous Improvement</h3>
+<div class="text-sm mt-1">Each interaction teaches agents to work better with your unique style and requirements</div>
+</div>
+
+<!--
+The learning categories system helps agents understand and adapt to your working style across multiple dimensions.
+
+User preferences cover how you like to communicate - whether you prefer detailed explanations or quick summaries, visual aids or text-based responses, and your general interaction patterns.
+
+Task patterns involve understanding your recurring workflows, domain-specific needs, and tool preferences. This helps agents anticipate what you'll need and streamline common operations.
+
+Context triggers allow agents to be environmentally aware - adapting based on the project you're working on, the time of day, or situational factors that affect how you work.
+
+The real-time adaptation example shows how this works in practice - when you mention performance, agents learn to automatically include benchmarks and metrics in their responses.
+
+This continuous learning ensures that each interaction is more efficient and tailored than the last.
 -->
 
 ---
@@ -844,24 +872,6 @@ layout: two-cols
 
 </div>
 
-<div v-click="5" class="mt-6">
-
-```bash
-$ agentcrew start
-🤖 AgentCrew initialized
-
-$ ask "Analyze React app structure"
-🔍 Research: Scanning project...
-🏗️ Architect: Analyzing patterns...
-📝 Report: ./analysis.md
-
-$ deploy --env staging
-⚙️ DevOps: Deploying to staging...
-✅ Deployment successful
-```
-
-</div>
-
 ::right::
 
 <div v-click="6">
@@ -874,23 +884,6 @@ $ deploy --env staging
 - 📊 **Real-time dashboards**
 - 🎮 **Interactive controls**
 - 📱 **User-friendly experience**
-
-</div>
-
-<div class="mt-6 p-4 border-2 border-gray-200 rounded-lg dark:border-gray-700">
-
-```
-┌─ AgentCrew Dashboard ─────────┐
-│ 🟢 5 Agents Active           │
-│                               │
-│ Current Tasks:                │
-│ ├── 🔍 Research: Scraping     │
-│ ├── 💻 Engineer: API dev      │
-│ └── 📝 Docs: Writing guide    │
-│                               │
-│ [Approve] [Monitor] [Config]  │
-└───────────────────────────────┘
-```
 
 </div>
 
@@ -965,15 +958,14 @@ layout: end
 
 ## **Questions & Discussion**
 
-<div class="grid grid-cols-2 gap-8 mt-12">
+<div class="grid grid-cols-2 gap-8 mt-12 text-left">
 
 <div>
 
 ### 🔗 **Resources**
 
-- Docs: `docs.agentcrew.ai`
-- GitHub: `github.com/agentcrew`
-- Discord: `discord.gg/agentcrew`
+- Website: `agentcrew.dev`
+- GH: `github.com/saigontechnology/AgentCrew`
 
 </div>
 
@@ -988,10 +980,6 @@ layout: end
 
 </div>
 
-</div>
-
-<div class="abs-br mx-14 my-12 flex">
-  <img src="https://cdn.jsdelivr.net/gh/slidevjs/slidev/assets/logo-title.png" class="w-40">
 </div>
 
 <!--
